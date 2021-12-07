@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColorHighlight="@color/beyaz">
+    <item android:title="Not Al !"
+        android:textColorHighlight="@color/siyah">
+       <menu>
+           <item android:id="@+id/nav_item_birinci"
+               android:title="Yaklaşan Etütlerim"
+               android:textColorHighlight="@color/siyah"
+               android:visible="false"
+               android:icon="@drawable/kitap">
+
+           </item>
+           <item android:id="@+id/nav_item_ikinci"
+               android:title="Notepad"
+               android:textColorHighlight="@color/siyah"
+               android:icon="@drawable/note"
+               >
+
+           </item>
+
+       </menu>
+
+    </item>
+
+
+    <item
+        android:textColorHighlight="#757575"
+        android:title="Diğer">
+        <menu>
+            <item
+                android:id="@+id/nav_item_ucuncu"
+                android:icon="@drawable/face"
+                android:textColorHighlight="@color/siyah"
+                android:title="Hakkımızda">
+
+            </item>
+            <item
+                android:id="@+id/cikis"
+                android:icon="@drawable/exit"
+                android:textColorHighlight="@color/siyah"
+                android:title="Hesaptan Çıkış Yap">
+
+            </item>
+
+
+        </menu>
+
+
+    </item>
+
+</menu>

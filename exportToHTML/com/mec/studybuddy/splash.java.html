@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>splash.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+splash.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.mec.studybuddy</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">android.content.Intent</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.os.Handler</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.animation.Animation</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.animation.AnimationUtils</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.widget.ImageView</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">com.google.firebase.auth.FirebaseAuth</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">com.google.firebase.auth.FirebaseUser</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">splash </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+    <span class="s0">private </span><span class="s1">ImageView logo </span><span class="s0">, </span><span class="s1">logoyazi </span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">FirebaseAuth auth </span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">FirebaseUser currentUser </span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">Animation animation </span><span class="s0">;</span>
+    <span class="s0">public void </span><span class="s1">baglayici(){</span>
+        <span class="s1">logoyazi = (ImageView) findViewById(R.id.logoyazi)</span><span class="s0">;</span>
+        <span class="s1">logo = (ImageView) findViewById(R.id.logo)</span><span class="s0">;</span>
+        <span class="s1">auth = FirebaseAuth.getInstance()</span><span class="s0">;</span>
+        <span class="s1">currentUser = auth.getCurrentUser()</span><span class="s0">;</span>
+
+
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(R.layout.activity_splash)</span><span class="s0">;</span>
+        <span class="s1">baglayici()</span><span class="s0">;</span>
+
+        <span class="s1">Animation animation = AnimationUtils.loadAnimation(splash.</span><span class="s0">this , </span><span class="s1">R.anim.alphayapimi)</span><span class="s0">;</span>
+        <span class="s1">logo.startAnimation(animation)</span><span class="s0">;</span>
+        <span class="s1">logoyazi.startAnimation(animation)</span><span class="s0">;</span>
+
+        <span class="s0">new </span><span class="s1">Handler().postDelayed(</span><span class="s0">new </span><span class="s1">Runnable() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">run() {</span>
+               <span class="s0">if</span><span class="s1">(currentUser == </span><span class="s0">null</span><span class="s1">){</span>
+                   <span class="s1">Intent mi = </span><span class="s0">new </span><span class="s1">Intent(splash.</span><span class="s0">this , </span><span class="s1">MainActivity.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+                   <span class="s1">startActivity(mi)</span><span class="s0">;</span>
+                   <span class="s1">finish()</span><span class="s0">;</span>
+
+
+               <span class="s1">}</span><span class="s0">else </span><span class="s1">{</span>
+                   <span class="s1">Intent mi = </span><span class="s0">new </span><span class="s1">Intent(splash.</span><span class="s0">this , </span><span class="s1">etut_merkezi.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+                   <span class="s1">startActivity(mi)</span><span class="s0">;</span>
+                   <span class="s1">finish()</span><span class="s0">;</span>
+
+
+               <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span><span class="s0">,</span><span class="s2">2000</span><span class="s1">)</span><span class="s0">;</span>
+
+
+
+
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mec.studybuddy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logomuz"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logomuz"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudyBuddy">
+        <activity android:name=".arkadaslar"></activity>
+        <activity android:name=".takipci" />
+        <activity android:name=".chatlesme" />
+        <activity android:name=".insan_profil" />
+        <activity android:name=".NoteEditorActivity" />
+        <activity android:name=".note" />
+        <activity android:name=".classroom" />
+        <activity android:name=".SetTimeActivty" />
+        <activity android:name=".sinif" />
+        <activity android:name=".Hatirlatici" />
+        <activity
+            android:name=".Kesfet"
+            android:parentActivityName=".etut_merkezi" />
+        <activity android:name=".AddEtut" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".PhotoFireBase" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".chat_ekrani" />
+        <activity android:name=".etut_merkezi" />
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".kayit_ekrani" />
+        <activity android:name=".MainActivity" />
+
+        <receiver android:name=".AlarmReceiver" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

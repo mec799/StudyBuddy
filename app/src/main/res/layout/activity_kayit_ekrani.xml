@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/siyah"
+    tools:context=".kayit_ekrani">
+
+    <Button
+        android:id="@+id/kaydol_buton_kayit_ekrani"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="#FFFFFF"
+        android:text="HEMEN KAYDOL"
+        android:textColor="#F7F5F6"
+        app:backgroundTint="#C52023"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parola_tekrar_edtxt_kayit_ekrani" />
+
+    <EditText
+        android:id="@+id/parola_tekrar_edtxt_kayit_ekrani"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="  Parola Tekrar"
+        android:inputType="textPassword"
+        android:textColor="#F7F5F6"
+        android:textColorHint="@color/beyaz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parola_edtxt_kayit_ekrani" />
+
+    <EditText
+        android:id="@+id/parola_edtxt_kayit_ekrani"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="  Parola "
+        android:inputType="textPassword"
+        android:textColor="#F7F5F6"
+        android:textColorHint="@color/beyaz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_edtxt_kayit_ekrani" />
+
+    <EditText
+        android:id="@+id/kullanici_adi_edtxt_kayit_ekrani"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="  Kullanıcı Adı"
+        android:inputType="textPersonName"
+        android:textColor="#F7F5F6"
+        android:textColorHint="@color/beyaz"
+        app:layout_constraintBottom_toTopOf="@+id/email_edtxt_kayit_ekrani"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_edtxt_kayit_ekrani"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="  Email"
+        android:inputType="textEmailSubject"
+        android:textColor="#F7F5F6"
+        android:textColorHint="@color/beyaz"
+        app:layout_constraintBottom_toTopOf="@+id/parola_edtxt_kayit_ekrani"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/allerta"
+        android:text="Kayıt Ol"
+        android:textColor="#F7F5F6"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
